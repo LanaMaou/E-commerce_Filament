@@ -42,7 +42,6 @@ class BrandResource extends Resource
                                 ->required()
                                 ->live(onBlur: true)
                                 ->afterStateUpdated(fn (string $operation, $state, Set $set) => $operation === 'create' ? $set('slug', Str::slug($state)) : null),
-
                             TextInput::make('slug')
                                 ->maxLength(255)
                                 ->disabled()
@@ -50,11 +49,9 @@ class BrandResource extends Resource
                                 ->unique(Brand::class, 'slug', ignoreRecord: true)
                                 ->required(),
                         ]),
-
                     FileUpload::make('image')
                         ->image()
                         ->directory('brands'),
-
                     Toggle::make('is_active')
                         ->required()
                         ->default(true),
