@@ -44,7 +44,7 @@ class ProductResource extends Resource
                             ->required()
                             ->maxLength(255)
                             ->live(onBlur: true)
-                            ->afterStateUpdated(fn (string $operation, $state, Set $set) => $operation === 'create' ? $set('slug', Str::slug($state)) : null),
+                            ->afterStateUpdated(fn(string $operation, $state, Set $set) => $operation === 'create' ? $set('slug', Str::slug($state)) : null),
                         TextInput::make('slug')
                             ->required()
                             ->disabled()
@@ -108,7 +108,7 @@ class ProductResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('brand.name')
-                    ->description(fn (Product $record): string => Str::upper($record->name))
+                    ->description(fn(Product $record): string => Str::upper($record->name))
                     ->label('Name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('category.name')
