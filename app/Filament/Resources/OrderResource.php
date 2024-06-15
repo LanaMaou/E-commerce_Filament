@@ -40,6 +40,8 @@ class OrderResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-shopping-bag';
 
+    protected static ?int $navigationSort = 5;
+
     public static function form(Form $form): Form
     {
         return $form
@@ -205,7 +207,11 @@ class OrderResource extends Resource
                 TextColumn::make('payment_status')
                     ->label('Payment Status')
                     ->badge()
-                    ->color('success')
+                    ->color(fn ($state) => match ($state) {
+                        'paid' => 'success',
+                        'pending' => 'warning',
+                        'failed' => 'danger',
+                    })
                     ->formatStateUsing(fn ($state) => Str::ucwords($state))
                     ->sortable()
                     ->searchable(),
