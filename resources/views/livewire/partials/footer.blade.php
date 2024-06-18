@@ -37,25 +37,6 @@
             </div>
             <!-- End Col -->
 
-            <div class="col-span-2">
-                <h4 class="font-semibold text-gray-100">Stay up to date</h4>
-
-                <form>
-                    <div
-                        class="flex flex-col items-center gap-2 p-2 mt-4 bg-white rounded-lg sm:flex-row sm:gap-3 dark:bg-gray-800">
-                        <div class="w-full">
-                            <input type="text" id="hero-input" name="hero-input"
-                                class="block w-full px-4 py-3 text-sm border-transparent rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-transparent dark:text-gray-400 dark:focus:ring-gray-600"
-                                placeholder="Enter your email">
-                        </div>
-                        <a class="inline-flex items-center justify-center w-full p-3 text-sm font-semibold text-white bg-blue-600 border border-transparent rounded-lg sm:w-auto whitespace-nowrap gap-x-2 hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                            href="#">
-                            Subscribe
-                        </a>
-                    </div>
-
-                </form>
-            </div>
             <!-- End Col -->
         </div>
         <!-- End Grid -->
