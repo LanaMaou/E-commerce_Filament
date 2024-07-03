@@ -193,7 +193,8 @@
                 </div>
                 <button type="submit"
                     class="w-full p-3 mt-4 text-lg text-white bg-green-500 rounded-lg hover:bg-green-600">
-                    Place Order
+                    <span wire:loading.remove>Place Order</span>
+                    <span wire:loading>Processing.......</span>
                 </button>
                 <div class="p-4 mt-4 bg-white shadow rounded-xl sm:p-7 dark:bg-slate-900">
                     <div class="mb-2 text-xl font-bold text-gray-700 underline dark:text-white">
